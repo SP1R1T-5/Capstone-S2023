@@ -1,0 +1,32 @@
+#All Switches/Routers will start on 2 (S2, R2) this is due to another classmate in the same server rack
+#IP address range 10.250.xxx.xxx
+
+1/21/22 (Day 1)
+
+Added Switch2
+Added Router2
+Cleared Flash data from previous year
+
+1/23/22
+
+Added PC1
+Installed ESXI 7.0/VMWare on PC1 to Hard-drive 1(WD3200LPLX-7)
+Added PC1 to S2 through Port F0/1
+Port F0/2 will be used for my laptop, this is how im configuring my network *
+Added R2 to S2 through F0/3
+S2 default gateway 10.250.1.1
+R2 default gateway 10.250.1.1
+R2 to G0/0/0
+R2 port interface G0/0/0 ip address given is 10.250.1.5
+
+Current Issues
+
+-Only able to access VMWare config webpage through Virtual Machine on laptop
+-Laptop is blocking connection to VMWare Config Page 
+
+Upcoming Updates 
+
+-Need to add a Windows Server to the VMWare Database. 
+-Configure Windows Server setup.
+-Configure DHCP service on Windows Server.
+-Shutdown all un-used ports to block physical attacks.
