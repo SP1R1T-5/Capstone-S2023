@@ -1,0 +1,42 @@
+#All Switches/Routers will start on 2 (S2, R2) this is due to another classmate in the same server rack
+#IP address range 10.250.xxx.xxx
+#Laptop = Using Windows Server VM to access the VMWare OS Config Screen due to physical laptop blocking connection to capstone network
+
+#The past 2 weeks have been slow in terms of assignments, the week of 2/3 I had been working on a bug that crashed my Windows Server running on my VMWare Server on boot
+# this issue lasted from 1/26 - 1/30.
+
+#The Solution to the bug was the ISO used to run the Windows Server corrupted and after a new ISO was installed to the VMWare Database the Windows Server booted
+# and ran after the issue.
+
+#
+
+1/30/22
+
+Found Corrupted ISO in VMWare database, Corrupted ISO Size: 1.2Gb | Non-Corrupted Size: 5 Gb
+Deleted Corrupted Windows Server ISO from VMWare Database 
+Added Windows Server OS to VMWare Database 
+Installed Windows Server OS 
+Configured Windows Server OS to 10.250.1.30
+Installed Windows Server Manager using the GUI
+Installed DHCP Server throught the Server Manager GUI
+DHCP Scope Given 10.250.10.30-60/24
+Connected Laptop to DHCP Server and was given 10.250.1.31
+Was able to Ping Switch,Router, and VMWare PC from Laptop
+
+2/7/22
+
+Configured Banner MOTD on S2
+Domain Created, Capstone-Edwards
+Created RSA Crypto Key for SSH connection, 1024 Bits used
+Shutdown ports 2,4,6-48 due to physical security concerns
+Configured Banner MOTD on R2
+Configured Loopback1 on R2 to have 20.250.10.1/24 address
+Domain created on R2, Captstone-Edwards
+Created RSA Crypto Key for SSH Connection, 1024 Bits Used
+Ping Test from Windows Server 
+10.250.1.1 - 100% Pass, Destination Host Unreachable
+10.250.1.2 - 100% Pass
+10.250.1.3 - 100% Pass, Destination Host Unreachable
+10.250.1.11 - 100% Pass
+
+
